@@ -4,8 +4,6 @@
 
 仿今日头条 腾讯新闻...转场动画。抽屉式转场。
 
-注意: 不能跟 FDFullscreenPopGesture 框架混合在项目. FDFullscreenPopGesture 会拦截手势。
-
 ***
 #### DEMO效果：
 
