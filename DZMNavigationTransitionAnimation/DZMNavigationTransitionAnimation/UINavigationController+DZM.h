@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UINavigationController (DZM)
 
-/// 返回手势启用(禁用)
-@property(nonatomic,assign) BOOL interactivePopGestureRecognizerEnabled;
+/// 返回手势启用(禁用) 默认:YES
+@property(nonatomic,assign) BOOL dzm_interactivePopDisabled;
 
 - (void)dzm_pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 

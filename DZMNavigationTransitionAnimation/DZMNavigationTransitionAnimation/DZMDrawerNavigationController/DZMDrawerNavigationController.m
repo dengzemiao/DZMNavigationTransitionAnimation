@@ -186,12 +186,12 @@
 
 #pragma mark - 系统方法拦截
 
-- (void)setInteractivePopGestureRecognizerEnabled:(BOOL)interactivePopGestureRecognizerEnabled {
+- (void)setDzm_interactivePopDisabled:(BOOL)dzm_interactivePopDisabled {
     
-    self.pan.enabled = interactivePopGestureRecognizerEnabled;
+    self.pan.enabled = dzm_interactivePopDisabled;
 }
 
-- (BOOL)interactivePopGestureRecognizerEnabled {
+- (BOOL)dzm_interactivePopDisabled {
     
     return self.pan.isEnabled;
 }

@@ -10,12 +10,12 @@
 
 @implementation UINavigationController (DZM)
 
-- (void)setInteractivePopGestureRecognizerEnabled:(BOOL)interactivePopGestureRecognizerEnabled {
+- (void)setDzm_interactivePopDisabled:(BOOL)dzm_interactivePopDisabled {
     
-    self.interactivePopGestureRecognizer.enabled = interactivePopGestureRecognizerEnabled;
+    self.interactivePopGestureRecognizer.enabled = dzm_interactivePopDisabled;
 }
 
-- (BOOL)interactivePopGestureRecognizerEnabled {
+- (BOOL)dzm_interactivePopDisabled {
     
     return self.interactivePopGestureRecognizer.enabled;
 }
