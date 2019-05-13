@@ -15,10 +15,10 @@
 #define DZM_SCALE_DRAG_RECT 0.8
 
 /// 拖拽返回成功计算范围(也就是拖拽当前视图宽的多少比例之后算成功)
-#define DZM_SCALE_DRAG_SUCCESS_RECT 0.3
+#define DZM_SCALE_DRAG_SUCCESS_RECT 0.2
 
 /// 遮盖颜色透明度
-#define DZM_ALPHA_COVER_COLOR 0.3
+#define DZM_ALPHA_COVER_COLOR 0.5
 
 /// 拖拽完成之后(切换页面)收尾动画时间
 #define DZM_AD_TIME 0.3
