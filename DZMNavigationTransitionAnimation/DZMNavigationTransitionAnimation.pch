@@ -1,0 +1,18 @@
+//
+//  DZMNavigationTransitionAnimation.pch
+//  DZMNavigationTransitionAnimation
+//
+//  Created by dengzemiao on 2019/5/13.
+//  Copyright © 2019 DZM. All rights reserved.
+//
+
+#ifndef DZMNavigationTransitionAnimation_h
+#define DZMNavigationTransitionAnimation_h
+
+/// 导航栏扩展(也就是自定义导航栏的辅助,不需要可以不用)
+#import "DZMNavigationExtension.h"
+
+/// 自定义转场动画(转场动画)
+#import "UINavigationController+DZM.h"
+
+#endif /* DZMNavigationTransitionAnimation_h */
