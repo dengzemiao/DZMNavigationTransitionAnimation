@@ -181,7 +181,14 @@
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     
-    return self.childViewControllers.count > 1;
+    // 超过1个控制器
+    if (self.viewControllers.count <= 1) { return NO; }
+    
+    /// 查看当前控制器是否允许拖拽手势
+    UIViewController *vc = self.viewControllers.lastObject;
+    if (vc.dzm_interactivePopDisabled) { return NO; }
+    
+    return YES;
 }
 
 #pragma mark - 系统方法拦截

@@ -9,17 +9,11 @@
 #import "UINavigationBar+DZM.h"
 #import <objc/runtime.h>
 
-static char DZMBarBackgroundColor;
-static char DZMBarBackgroundView;
-static char DZMBarCustomBackgroundColor;
-static char DZMBarShadowImageHidden;
-static char DZMBarAlpha;
-
 @implementation UINavigationBar (DZM)
 
 - (UIColor *)barBackgroundColor {
     
-    return objc_getAssociatedObject(self, &DZMBarBackgroundColor);
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setBarBackgroundColor:(UIColor *)barBackgroundColor {
@@ -42,12 +36,12 @@ static char DZMBarAlpha;
         [self barBackgroundView:barBackgroundColor];
     }
     
-    objc_setAssociatedObject(self, &DZMBarBackgroundColor, barBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(barBackgroundColor), barBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIColor *)barCustomBackgroundColor {
     
-    return objc_getAssociatedObject(self, &DZMBarCustomBackgroundColor);
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setBarCustomBackgroundColor:(UIColor *)barCustomBackgroundColor {
@@ -63,41 +57,41 @@ static char DZMBarAlpha;
         [self barBackgroundView:barCustomBackgroundColor];
     }
     
-    objc_setAssociatedObject(self, &DZMBarCustomBackgroundColor, barCustomBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(barCustomBackgroundColor), barCustomBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIView *)barBackgroundView {
     
-    return objc_getAssociatedObject(self, &DZMBarBackgroundView);
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setBarBackgroundView:(UIView *)barBackgroundView {
     
-    objc_setAssociatedObject(self, &DZMBarBackgroundView, barBackgroundView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(barBackgroundView), barBackgroundView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (BOOL)barShadowImageHidden {
     
-    return ((NSNumber *)objc_getAssociatedObject(self, &DZMBarShadowImageHidden)).boolValue;
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
 - (void)setBarShadowImageHidden:(BOOL)barShadowImageHidden {
     
     self.shadowImage = barShadowImageHidden ? [UIImage new] : nil;
     
-    objc_setAssociatedObject(self, &DZMBarShadowImageHidden, [NSNumber numberWithBool:barShadowImageHidden], OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(barShadowImageHidden), @(barShadowImageHidden), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (CGFloat)barAlpha {
     
-    NSNumber *barAlpha = ((NSNumber *)objc_getAssociatedObject(self, &DZMBarAlpha));
+    NSNumber *barAlpha = ((NSNumber *)objc_getAssociatedObject(self, _cmd));
     
     return (barAlpha != nil ? barAlpha.floatValue : 1.0);
 }
 
 - (void)setBarAlpha:(CGFloat)barAlpha {
     
-    objc_setAssociatedObject(self, &DZMBarAlpha, [NSNumber numberWithFloat:barAlpha], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(barAlpha), @(barAlpha), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self barAlpha:self];
 }

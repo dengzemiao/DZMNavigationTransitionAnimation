@@ -24,4 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface UIViewController (DZM)
+
+/// 单个页面返回手势启用(禁用) 默认:YES
+@property (nonatomic, assign) BOOL dzm_interactivePopDisabled;
+
+@end
+
 NS_ASSUME_NONNULL_END

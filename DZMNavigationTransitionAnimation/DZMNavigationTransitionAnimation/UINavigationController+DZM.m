@@ -7,6 +7,7 @@
 //
 
 #import "UINavigationController+DZM.h"
+#import <objc/runtime.h>
 
 @implementation UINavigationController (DZM)
 
@@ -33,6 +34,20 @@
 - (void)dzm_popToRootViewControllerAnimated:(BOOL)animated {
     
     [self popToRootViewControllerAnimated:animated];
+}
+
+@end
+
+@implementation UIViewController (DZM)
+
+- (BOOL)dzm_interactivePopDisabled {
+   
+     return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
+
+- (void)setDzm_interactivePopDisabled:(BOOL)disabled {
+    
+    objc_setAssociatedObject(self, @selector(dzm_interactivePopDisabled), @(disabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
