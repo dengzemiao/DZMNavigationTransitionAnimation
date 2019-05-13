@@ -31,9 +31,6 @@
     
     [super viewDidLoad];
     
-    // 隐藏导航栏
-    [self.navigationController setNavigationBarHidden:YES];
-    
     // 设置title
     if (self.tag > 0) { self.title = [NSString stringWithFormat:@"%ld",(long)self.tag]; }
     

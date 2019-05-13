@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    // 隐藏系统导航栏
+    [self setNavigationBarHidden:YES];
 }
 
 - (void)dzm_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
