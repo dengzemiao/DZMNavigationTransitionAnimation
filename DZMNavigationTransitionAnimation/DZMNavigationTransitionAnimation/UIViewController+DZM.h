@@ -8,7 +8,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// 这个只用于自定义扩展使用 还没有支持类似 FDFullscreenPopGesture 上用于系统导航的功能。不过可以加上。
+// 这个只用于自定义扩展使用 还没有支持类似 FDFullscreenPopGesture 上用于系统导航的功能。不过可以加上。或者直接把 FDFullscreenPopGesture 里面对应下面属性的写在set方法中就可以了
 @interface UIViewController (DZM)
 
 /// 单个页面返回手势启用(禁用) 默认:NO
