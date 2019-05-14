@@ -179,14 +179,21 @@
 
 #pragma mark - UIGestureRecognizerDelegate
 
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+- (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
     
     // 超过1个控制器
     if (self.viewControllers.count <= 1) { return NO; }
     
-    /// 查看当前控制器是否允许拖拽手势
+    // 查看当前控制器是否允许拖拽手势
     UIViewController *vc = self.viewControllers.lastObject;
     if (vc.dzm_interactivePopDisabled) { return NO; }
+    
+    // 正在转场动画
+    if ([[self valueForKey:@"_isTransitioning"] boolValue]) { return NO; }
+    
+    // 判断手势拖拽方向
+    CGPoint translation = [gestureRecognizer translationInView:gestureRecognizer.view];
+    if (translation.x <= 0) { return NO; }
     
     return YES;
 }
