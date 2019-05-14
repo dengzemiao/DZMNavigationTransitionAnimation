@@ -37,17 +37,3 @@
 }
 
 @end
-
-@implementation UIViewController (DZM)
-
-- (BOOL)dzm_interactivePopDisabled {
-   
-     return [objc_getAssociatedObject(self, _cmd) boolValue];
-}
-
-- (void)setDzm_interactivePopDisabled:(BOOL)disabled {
-    
-    objc_setAssociatedObject(self, @selector(dzm_interactivePopDisabled), @(disabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-@end

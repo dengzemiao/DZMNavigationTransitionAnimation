@@ -7,27 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+DZM.h"
 #import "DZMDrawerNavigationController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UINavigationController (DZM)
 
-/// 返回手势启用(禁用) 默认:YES
+/// 返回手势启用(禁用) 默认:NO
 @property(nonatomic,assign) BOOL dzm_interactivePopDisabled;
 
+/// PUSH
 - (void)dzm_pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 
+/// POP
 - (void)dzm_popViewControllerAnimated:(BOOL)animated;
 
+/// POP ROOT
 - (void)dzm_popToRootViewControllerAnimated:(BOOL)animated;
-
-@end
-
-@interface UIViewController (DZM)
-
-/// 单个页面返回手势启用(禁用) 默认:YES
-@property (nonatomic, assign) BOOL dzm_interactivePopDisabled;
 
 @end
 

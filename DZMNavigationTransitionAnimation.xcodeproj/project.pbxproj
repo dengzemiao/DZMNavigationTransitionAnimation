@@ -15,6 +15,7 @@
 		AF0208D92285196300F17566 /* DZMNavigationTransitionAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0208D82285196300F17566 /* DZMNavigationTransitionAnimationUITests.m */; };
 		AF0208E9228519E000F17566 /* UINavigationController+DZM.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0208E8228519E000F17566 /* UINavigationController+DZM.m */; };
 		AF0208ED22851A3800F17566 /* DZMDrawerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0208EC22851A3800F17566 /* DZMDrawerNavigationController.m */; };
+		AF04126C228A61AB00F34558 /* UIViewController+DZM.m in Sources */ = {isa = PBXBuildFile; fileRef = AF04126B228A61AB00F34558 /* UIViewController+DZM.m */; };
 		AF0C2755228909B8007464A4 /* DZMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0C2754228909B8007464A4 /* DZMTabBarController.m */; };
 		AF0C275822890A03007464A4 /* DZMGifController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0C275722890A03007464A4 /* DZMGifController.m */; };
 		AF0C275A2289103F007464A4 /* temp.gif in Resources */ = {isa = PBXBuildFile; fileRef = AF0C27592289103F007464A4 /* temp.gif */; };
@@ -60,6 +61,8 @@
 		AF0208E8228519E000F17566 /* UINavigationController+DZM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+DZM.m"; sourceTree = "<group>"; };
 		AF0208EB22851A3800F17566 /* DZMDrawerNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZMDrawerNavigationController.h; sourceTree = "<group>"; };
 		AF0208EC22851A3800F17566 /* DZMDrawerNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZMDrawerNavigationController.m; sourceTree = "<group>"; };
+		AF04126A228A61AB00F34558 /* UIViewController+DZM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DZM.h"; sourceTree = "<group>"; };
+		AF04126B228A61AB00F34558 /* UIViewController+DZM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DZM.m"; sourceTree = "<group>"; };
 		AF0C2753228909B8007464A4 /* DZMTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZMTabBarController.h; sourceTree = "<group>"; };
 		AF0C2754228909B8007464A4 /* DZMTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZMTabBarController.m; sourceTree = "<group>"; };
 		AF0C275622890A03007464A4 /* DZMGifController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZMGifController.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 			children = (
 				AF0208E7228519E000F17566 /* UINavigationController+DZM.h */,
 				AF0208E8228519E000F17566 /* UINavigationController+DZM.m */,
+				AF04126A228A61AB00F34558 /* UIViewController+DZM.h */,
+				AF04126B228A61AB00F34558 /* UIViewController+DZM.m */,
 				AF0208EA22851A2A00F17566 /* DZMDrawerNavigationController */,
 			);
 			path = DZMNavigationTransitionAnimation;
@@ -330,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF04126C228A61AB00F34558 /* UIViewController+DZM.m in Sources */,
 				AF0208ED22851A3800F17566 /* DZMDrawerNavigationController.m in Sources */,
 				AF0C276F22893C33007464A4 /* DZMTabBar.m in Sources */,
 				AF0208C42285196300F17566 /* main.m in Sources */,
