@@ -6,6 +6,8 @@
 //  Copyright © 2019 DZM. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 // 这个只用于自定义扩展使用 还没有支持类似 FDFullscreenPopGesture 上用于系统导航的功能。不过可以加上。或者直接把 FDFullscreenPopGesture 里面对应下面属性的写在set方法中就可以了
