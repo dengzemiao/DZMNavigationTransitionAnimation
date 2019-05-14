@@ -7,6 +7,7 @@
 //
 
 #import "DZMDrawerNavigationController.h"
+#import "UIViewController+DZM.h"
 
 /// 封面图缩放比例
 #define DZM_SCALE_IMAGE_VIEW 0.95
